@@ -10,18 +10,24 @@ body {
   font-family: "Merriweather", serif;
   line-height: 1.6;
   color: #3a3a3a;
- /* display: block; */
- 
 }
 
 h1 {
-    color: white;
-    font-size: 2rem;
-    background-color: black;
-    margin-top: 0;
-    /* text-align: center; */
-    
-   
+  color: white;
+  font-size: 1.5rem;
+  background-color: black;
+  margin-top: 0;
+
+  text-transform: uppercase;
+  line-height: 3;
+}
+
+h2,
+legend {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: black;
+  padding-top: 15px;
 }
 
 ul {
@@ -31,21 +37,84 @@ ul {
 }
 
 p {
-  font-size: 0.95em;
-  margin-bottom: 1.8em;
+  font-size: 0.95rem;
 }
 
 /* ================================= 
   Base Layout Styles
 ==================================== */
 
-.main {
-   /* width: 100%; */
-}
 /* ---- header ---- */
 
 header {
-  /* margin: 0 auto; */
-  /* width: 100%;
- text-align: center;    */
+  text-align: center;
+  border-bottom: 5px solid black;
+  position: relative;
+  margin-bottom: 20px;
 }
+
+header::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -13px;
+  border-bottom: 3px solid black;
+  z-index: -1;
+}
+
+header p {
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 20px;
+  color: grey;
+}
+
+/* ---- form ---- */
+
+fieldset,
+legend {
+  border: 0;
+  
+}
+
+.main {
+  padding-top: 20px 10px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+label {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+  background-color: #eeeeee;
+  border: none;
+  padding: 20px 30px;
+}
+
+input[type="email"], input[id="name"] {
+    text-align: right;
+    font-size: .75rem;
+    font-style:italic;
+}
+
+/* ---- footer ---- */
+
+footer {
+    text-align: center;
+}
+
+
+
