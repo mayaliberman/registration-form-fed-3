@@ -10,6 +10,8 @@ body {
   font-family: "Merriweather", serif;
   line-height: 1.6;
   color: #3a3a3a;
+  
+ 
 }
 
 h1 {
@@ -17,7 +19,6 @@ h1 {
   font-size: 1.5rem;
   background-color: black;
   margin-top: 0;
-
   text-transform: uppercase;
   line-height: 3;
 }
@@ -27,7 +28,11 @@ legend {
   font-size: 1.3rem;
   font-weight: 900;
   color: black;
-  padding-top: 15px;
+}
+
+h2 {
+    
+    padding-top: 15px;
 }
 
 ul {
@@ -73,35 +78,43 @@ header p {
 
 /* ---- form ---- */
 
-fieldset,
-legend {
+fieldset
+ {
   border: 0;
-  
-}
+  margin: 0 auto;
+  padding: 0;
+  }
+
+
 
 .main {
-  padding-top: 20px 10px;
+  padding: 20px 3%;
 }
 
 li {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  
 }
 
 label {
   padding-top: 15px;
   padding-bottom: 15px;
+ 
 }
+
 
 input,
 select,
 textarea {
+   border-radius: 5px;
   background-color: #eeeeee;
   border: none;
-  padding: 20px 30px;
+  padding: 20px 20px;
+ 
+  
+  
 }
 
 input[type="email"], input[id="name"] {
@@ -110,11 +123,72 @@ input[type="email"], input[id="name"] {
     font-style:italic;
 }
 
+input:focus,  select:focus, textarea:focus  {
+    outline-color: black;
+}
+
+
+li:last-child::after {
+    content: "";
+padding-bottom: 40px;
+  border-bottom: 3px solid black;
+  
+}
+
+.newsletter-legend {
+    padding-top: 30px;
+}
+
+.newsletter-fieldset li {
+  display: block;
+  padding-bottom: 20px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+textarea {
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #317EC6;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    margin:20px auto;
+    padding: 25px 0px;
+
+    
+}
+
+
 /* ---- footer ---- */
 
 footer {
     text-align: center;
+    color: grey;
 }
 
+/* ================================= 
+    Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+.main {
+    
+    width: 60%;
+    margin: 0 auto;
+}
+
+header, header::after {
+    border: none;
+}
+}
 
 

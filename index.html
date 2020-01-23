@@ -17,13 +17,13 @@
         <h2>Signup for our newsletter</h2>
         <p>Get the latest news on how your code is doing right in your inbox</p>
     </header>
-    <div >
+    
         <div class="main">
             <form action="index.html" method="post">
                 <fieldset>
                     <legend>Contact Information</legend>
-                    <ul>
-                        <li>
+                    <ul class="contact-info">
+                        <li >
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="user_name" placeholder="Required" required>
                         </li>
@@ -47,6 +47,7 @@
                         <li>
                             <label for="state">State</label>
                             <select id="state" name="state">
+                                <option value="">Select a Country</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -104,15 +105,16 @@
                             <input type="number" id="zip" name="user_zip"></li>
                     </ul>
                 </fieldset>
-                <fieldset>
-                    <legend>Newsletter</legend>
+                <fieldset class="newsletter-fieldset">
+                    <legend  class="newsletter-legend">Newsletter</legend>
                     <ul>
                         <li>
                             <p>Select the newsletters you would like to recieve</p>
+                           
                             <input type="checkbox" id="html-news" name="html-news">
-                            <label for="html-news">HTML News</label>
+                            <label for="html-news">HTML News</label><br>
                             <input type="checkbox" id="css-news" name="newsletter" value="CSS-news">
-                            <label for="css-news">CSS News</label>
+                            <label for="css-news">CSS News</label><br>
                             <input type="checkbox" id="js-news" name="newsletter" value="JS-news">
                             <label for="js-news">JavaScript News</label>
 
@@ -127,12 +129,12 @@
                             <textarea id="comments" name="user_comments" ></textarea>
                         </li>
                     </ul>
-                </fieldset>
+                </fieldsetclass="newsletter-legend">
                 <input type="submit" value="Sign Up">
             </form>
 
         </div>
-    </div>
+    
     <footer>
         <p>Copywrite the code review</p>
     </footer>
