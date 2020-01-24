@@ -20,7 +20,7 @@
 
     <div class="main">
         <form action="index.html" method="post">
-            <fieldset>
+            <fieldset class="contact-fieldset">
                 <legend>Contact Information</legend>
                 <ul class="contact-info">
                     <li>
@@ -105,7 +105,7 @@
                         <input type="number" id="zip" name="user_zip"></li>
                 </ul>
             </fieldset>
-            <fieldset class="newsletter-fieldset">
+            <fieldset  class="newsletter-fieldset">
                 <legend class="newsletter-legend">Newsletter</legend>
                 <ul>
                     <li>
@@ -121,15 +121,17 @@
                     </li>
                     <li>
                         <p>Newsletter format</p>
-                        <input type="radio" name="newsformat" value="html">HTML<br>
-                        <input type="radio" name="newsformat" value="plain">Plain<br>
+                        <input type="radio" name="newsformat" value="html" id="html">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" name="newsformat" value="plain" id="plain">
+                        <label for="plain">Plain Text</label> <br>
                     </li>
                     <li>
                         <label for="comments">Other topics you'd like to hear about</label>
                         <textarea id="comments" name="user_comments"></textarea>
                     </li>
                 </ul>
-                </fieldsetclass="newsletter-legend">
+                </fieldset >
                 <input type="submit" value="Sign Up">
         </form>
 
